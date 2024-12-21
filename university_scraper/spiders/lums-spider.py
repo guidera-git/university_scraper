@@ -16,7 +16,7 @@ class LumsSpider(scrapy.Spider):
             'website': response.url
         }
         yield data
-
+        
     def extract_fee_structure(self, response):
         # Code to extract fee structure data
         fee_structure = response.xpath('your-xpath-for-fee-structure').get()
