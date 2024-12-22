@@ -16,6 +16,10 @@ NEWSPIDER_MODULE = "university_scraper.spiders"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "university_scraper (+http://www.yourdomain.com)"
 
+# Allow all domains
+ALLOW_OFFSITE_REQUESTS = True
+
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
