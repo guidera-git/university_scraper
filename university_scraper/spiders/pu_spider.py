@@ -5,6 +5,7 @@ class PUSpider(scrapy.Spider):
     start_urls = ["https://pu.edu.pk/page"]
 
     def parse(self, response):
+        # Extract the introduction text
         descriptions = response.css('td > div[align="justify"]::text').getall()
         full_description = " ".join(descriptions).strip()
 
@@ -19,20 +20,19 @@ class PUSpider(scrapy.Spider):
         university_title = response.css('title::text').get().strip()
         main_link = response.xpath('//*[@id="logo"]/h1/a/@href').get()
 
+        # Extract social media links
         instagram_link = response.xpath('//*[@id="header"]/div[2]/div[1]/ul/li[4]/a/@href').get()
         facebook_link = response.xpath('//*[@id="header"]/div[2]/div[1]/ul/li[2]/a/@href').get()
         twitter_link = response.xpath('//*[@id="header"]/div[2]/div[1]/ul/li[3]/a/@href').get()
 
-        # Hard-code the ranking value as 3
+        # Hard-code the ranking value
         ranking = "3"
 
+        # Define contact page URL
         contact_page_url = "https://pu.edu.pk/page/show/contact-us.html"
-        campuses_page_url = "https://pu.edu.pk/page/show/Campuses.html"  # Add the campuses link
 
-        # Scrape the campus links and pass them along in the meta data
-        new_campus_link = response.xpath('//*[@id="news-blocks"]/section/div/div[2]/div/table/tbody/tr[2]/td/div/table/tbody/tr[2]/td[1]/a/@href').get()
-        old_campus_link = response.xpath('//*[@id="news-blocks"]/section/div/div[2]/div/table/tbody/tr[2]/td/div/table/tbody/tr[2]/td[3]/a/@href').get()
-        gujranwala_campus_link = response.xpath('//*[@id="news-blocks"]/section/div/div[2]/div/table/tbody/tr[2]/td/div/table/tbody/tr[3]/td[1]/a/@href').get()
+        # Define campuses page URL
+        campuses_page_url = "https://pu.edu.pk/page/show/Campuses.html"
 
         yield scrapy.Request(
             url=contact_page_url,
@@ -47,18 +47,13 @@ class PUSpider(scrapy.Spider):
                 },
                 "ranking": ranking,
                 "introduction": response.meta["introduction"],
-                "campuses_page_url": campuses_page_url,
-                "new_campus": new_campus_link,
-                "old_campus": old_campus_link,
-                "gujranwala_campus": gujranwala_campus_link
+                "campuses_page_url": campuses_page_url
             }
         )
 
     def parse_contact(self, response):
-        # Extract info email
+        # Extract contact details
         info_email = response.xpath('//*[@id="ntb"]/tbody/tr[7]/td[1]/span/span/font/a/font/text()').get()
-
-        # Extract call details
         call_number = response.xpath('//*[@id="ntb"]/tbody/tr[6]/td[2]/span/span/font/font/text()').get()
 
         # Pass the campuses data and other details to the next step
@@ -73,18 +68,18 @@ class PUSpider(scrapy.Spider):
                 "ranking": response.meta["ranking"],
                 "introduction": response.meta["introduction"],
                 "info_email": info_email,
-                "call_number": call_number,
-                "new_campus": response.meta["new_campus"],
-                "old_campus": response.meta["old_campus"],
-                "gujranwala_campus": response.meta["gujranwala_campus"]
+                "call_number": call_number
             }
         )
 
     def parse_campuses(self, response):
-        # Now, just use the passed campus links from the `meta` data
-        NewCampus = response.meta["new_campus"]
-        OldCampus = response.meta["old_campus"]
-        GujranwalaCampus = response.meta["gujranwala_campus"]
+        # Extract campus links
+        new_campus = response.xpath('//table//tr[2]/td[1]/a/@href').get()
+        old_campus = response.xpath('//table//tr[2]/td[3]/a/@href').get()
+        gujranwala_campus = response.xpath('//table//tr[3]/td[1]/a/@href').get()
+        khanspur_campus = response.xpath('//table//tr[3]/td[3]/a/@href').get()
+        jhelum_campus = response.xpath('//table//tr[4]/td[1]/div/a/@href').get()
+        pothohar_campus = response.xpath('//table/tbody/tr[4]/td[3]/div/a/@href').get()
 
         # Yield the full data in JSON format
         yield {
@@ -98,8 +93,11 @@ class PUSpider(scrapy.Spider):
             },
             "introduction": response.meta["introduction"],
             "campuses": {
-                "new_campus": NewCampus,
-                "old_campus": OldCampus,
-                "gujranwala_campus": GujranwalaCampus
+                "new_campus": new_campus,
+                "old_campus": old_campus,
+                "gujranwala_campus": gujranwala_campus,
+                "khanspur_campus": khanspur_campus,
+                "jhelum_campus": jhelum_campus,
+                "pothohar_campus": pothohar_campus
             }
         }
