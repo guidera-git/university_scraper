@@ -164,7 +164,6 @@ class PUSpider(scrapy.Spider):
             }
         )
 
-
     def parse_contact(self, response):
         info_email = response.xpath('//*[@id="ntb"]/tbody/tr[7]/td[1]/span/span/font/a/font/text()').get()
         call_number = response.xpath('//*[@id="ntb"]/tbody/tr[6]/td[2]/span/span/font/font/text()').get()
