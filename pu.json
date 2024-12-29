@@ -19,10 +19,26 @@
         "program_description": "The BS Software Engineering program aims to produce graduates with a strong foundation in computing, capable of applying theoretical concepts to solve problems, using appropriate methodologies and tools for software design and testing. Graduates are well-prepared for careers in the IT industry, graduate studies, and lifelong learning, with strong communication skills.",
         "program_duration": "4 years",
         "credit_hours": "130",
-        "fee": "90,000 PKR",
+        "fee": [
+          {
+            "per_credit_hour_fee": "5,538 PKR",
+            "total_tution_fee": "720,000 PKR"
+          }
+        ],
+        "important_dates":[
+          {
+            "deadline_application_submission": null,
+            "deadline_pay_application_fee": null,
+            "deadline_finencial_aid_application": null,
+            "daedline_ACT": null,
+            "daedline_SAT": null,
+            "deadline_admission_test_LCAT": null,
+            "admission_decision": null,
+            "commencement_of_classes": null
+          }
+        ],
         "merit": "89.23%",
         "teaching_system": "Semester System",
-        "session_begin": "Semester System",
         "admission_criteria": [
           {
             "s.no": 1,
@@ -75,10 +91,26 @@
         "program_description": "The BS Computer Science program aims to produce graduates with a strong foundation in computing, capable of applying theoretical concepts to solve problems, using appropriate methodologies and tools for software design and testing. Graduates are well-prepared for careers in the IT industry, graduate studies, and lifelong learning, with strong communication skills.",
         "program_duration": "4 years",
         "credit_hours": "130+",
-        "fee": "90,000 PKR",
+        "fee": [
+          {
+            "per_credit_hour_fee": "5,538 PKR",
+            "total_tution_fee": "720,000 PKR"
+          }
+        ],
+        "important_dates":[
+          {
+            "deadline_application_submission": null,
+            "deadline_pay_application_fee": null,
+            "deadline_finencial_aid_application": null,
+            "daedline_ACT": null,
+            "daedline_SAT": null,
+            "deadline_admission_test_LCAT": null,
+            "admission_decision": null,
+            "commencement_of_classes": null
+          }
+        ],
         "merit": "90.13%",
         "teaching_system": "Semester System",
-        "session_begin": "Semester System",
         "admission_criteria": [
           {
             "s.no": 1,
@@ -131,10 +163,26 @@
         "program_description": "The BS Data Science program aims to produce graduates with a strong foundation in computing, capable of applying theoretical concepts to solve problems, using appropriate methodologies and tools for software design and testing. Graduates are well-prepared for careers in the IT industry, graduate studies, and lifelong learning, with strong communication skills.",
         "program_duration": "4 years",
         "credit_hours": "130+",
-        "fee": "90,000 PKR",
+        "fee": [
+          {
+            "per_credit_hour_fee": "5,538 PKR",
+            "total_tution_fee": "720,000 PKR"
+          }
+        ],
+        "important_dates":[
+          {
+            "deadline_application_submission": null,
+            "deadline_pay_application_fee": null,
+            "deadline_finencial_aid_application": null,
+            "daedline_ACT": null,
+            "daedline_SAT": null,
+            "deadline_admission_test_LCAT": null,
+            "admission_decision": null,
+            "commencement_of_classes": null
+          }
+        ],
         "merit": "88.72%",
         "teaching_system": "Semester System",
-        "session_begin": "Semester System",
         "admission_criteria": [
           {
             "s.no": 1,
@@ -187,10 +235,26 @@
         "program_description": "The BS Information Technology program aims to produce graduates with a strong foundation in computing, capable of applying theoretical concepts to solve problems, using appropriate methodologies and tools for software design and testing. Graduates are well-prepared for careers in the IT industry, graduate studies, and lifelong learning, with strong communication skills.",
         "program_duration": "4 years",
         "credit_hours": "130+",
-        "fee": "90,000 PKR",
+        "fee": [
+          {
+            "per_credit_hour_fee": "5,538 PKR",
+            "total_tution_fee": "720,000 PKR"
+          }
+        ],
+        "important_dates":[
+          {
+            "deadline_application_submission": null,
+            "deadline_pay_application_fee": null,
+            "deadline_finencial_aid_application": null,
+            "daedline_ACT": null,
+            "daedline_SAT": null,
+            "deadline_admission_test_LCAT": null,
+            "admission_decision": null,
+            "commencement_of_classes": null
+          }
+        ],
         "merit": "88.46%",
         "teaching_system": "Semester System",
-        "session_begin": "Semester System",
         "admission_criteria": [
           {
             "s.no": 1,
@@ -243,10 +307,26 @@
         "program_description": "Exhibit comprehensive competence in the field of electrical engineering, enabling graduates to achieve successful careers in both industry and higher education sectors. Pursue research and innovation, providing effective industrial solutions through the adoption and integration of emerging technologies. Capacity to lead or participate as an effective team member to provide environment-friendly, sustainable, and economical solutions with good communication skills and high moral values.",
         "program_duration": "4 years",
         "credit_hours": "139",
-        "fee": "Not available",
+        "fee": [
+          {
+            "per_credit_hour_fee": "Not Available",
+            "total_tution_fee": "Not Available"
+          }
+        ],
+        "important_dates":[
+          {
+            "deadline_application_submission": null,
+            "deadline_pay_application_fee": null,
+            "deadline_finencial_aid_application": null,
+            "daedline_ACT": null,
+            "daedline_SAT": null,
+            "deadline_admission_test_LCAT": null,
+            "admission_decision": null,
+            "commencement_of_classes": null
+          }
+        ],
         "merit": "Not Available",
         "teaching_system": "Semester System",
-        "session_begin": "Semester System",
         "admission_criteria": [
           {
             "s.no": 1,

@@ -1,12 +1,11 @@
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
-
 import scrapy
 
-
 class UniversityScraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    university_title = scrapy.Field()
+    main_link = scrapy.Field()
+    social_links = scrapy.Field()
+    ranking = scrapy.Field()
+    contact_details = scrapy.Field()
+    introduction = scrapy.Field()
+    programs = scrapy.Field()
+    campuses = scrapy.Field()
