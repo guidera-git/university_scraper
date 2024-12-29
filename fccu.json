@@ -14,6 +14,46 @@
             "info_email": "contact@fccollege.edu.pk",
             "call": "(92 42) 99231581-8"
         },
-        "introduction": "FCCU was founded in 1864 with a vision to impart quality education to the people of this region and to contribute to their academic, economic and social development. From the premises of a small college, FCCU has grown into an academically robust university that offers a wide range of opportunities to its students to grow and reach their full potential.  FCCU welcomes students from all backgrounds and all regions of Pakistan and abroad to a University where they live, grow and learn, meet some of the greatest thinkers in their chosen disciplines and make lifelong friendships- a place they can truly call home. "
+        "introduction": "FCCU was founded in 1864 with a vision to impart quality education to the people of this region and to contribute to their academic, economic and social development. From the premises of a small college, FCCU has grown into an academically robust university that offers a wide range of opportunities to its students to grow and reach their full potential.  FCCU welcomes students from all backgrounds and all regions of Pakistan and abroad to a University where they live, grow and learn, meet some of the greatest thinkers in their chosen disciplines and make lifelong friendships- a place they can truly call home. ",
+        "programs": {
+            "computer science": {
+                "program_title": "BS (Hons) Computer Science",
+                "program_description": "degree program at FCCU is duly accredited by NCEAC (National Computing Education Accreditation Council) of HEC and is complemented by the University’s liberal arts education system. The program provides a solid understanding of the theory and techniques of Computer Science so that upon graduation the students can enter various industries or pursue graduate studies. Our courses are a mix from various areas that reflect the excitement and joy of computing, e.g. mathematics, electronics, algorithms, programming, theoretical computer science, artificial intelligence, application development, software engineering, networks, operating systems, databases, computer vision, human-computer interaction and more.",
+                "program_duration": "4years",
+                "credit_hours": "not known",
+                "fee": "337000 per semester",
+                "merit": "not known",
+                "teaching_system": "Semester",
+                "session_begin": "",
+                "admission_criteria": [
+                    {
+                        "s.no": 1,
+                        "criteria": "● Students who have passed their Intermediate"
+                    },
+                    {
+                        "s.no": 2,
+                        "criteria": "● A- Level students who have cleared at least 3 principal A-Level exams (not AS Level)"
+                    },
+                    {
+                        "s.no": 3,
+                        "criteria": "\n● A- Level students who have given their A levels exams in October, November and are awaiting"
+                    },
+                    {
+                        "s.no": 4,
+                        "criteria": "\n● Students who have done their American High School. Equivalence needed attested from the"
+                    },
+                    {
+                        "s.no": 5,
+                        "criteria": "\n● Students who have done their Intermediate from the Technical Board"
+                    },
+                    {
+                        "s.no": 6,
+                        "criteria": "\n● Students applying for BS (Hons) Biotechnology must have done FSc Pre-Medical or should have"
+                    }
+                ],
+                "course_outline": "https://www.fccollege.edu.pk/baccalaureate-in-computer-sciences/"
+            }
+        },
+        "campuses": "Lahore"
     }
 ]
