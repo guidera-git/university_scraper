@@ -9,11 +9,47 @@
             "dailymotion_link": "https://www.dailymotion.com/BNU_university",
             "linkdin_link": "https://www.linkedin.com/school/beaconhouse-national-university-lahore/"
         },
-        "ranking": "not known",
         "contact_details": {
             "info_email": "info@bnu.edu.pk",
             "call": "042-38100156"
         },
-        "introduction": "Established in 2003 and chartered by the Government of Punjab in 2005, Beaconhouse National University (BNU) is Pakistan's pioneering not-for-profit liberal arts institution. Rooted in values of diversity, inclusiveness, and academic freedom, BNU offers a comprehensive education spanning conventional and emerging disciplines. Its commitment to need-based scholarships has provided over one billion rupees in financial assistance, ensuring accessibility for all eligible students."
+        "introduction": "Established in 2003 and chartered by the Government of Punjab in 2005, Beaconhouse National University (BNU) is Pakistan's pioneering not-for-profit liberal arts institution. Rooted in values of diversity, inclusiveness, and academic freedom, BNU offers a comprehensive education spanning conventional and emerging disciplines. Its commitment to need-based scholarships has provided over one billion rupees in financial assistance, ensuring accessibility for all eligible students.",
+        "programs": {
+            "software_engineering": {
+                "program_title": "<h2>BSc (Hons) in Computer Science </h2>",
+                "program_description": "\n                In view of the ubiquitous presence of computers in industry, business and everyday life; ICT professionals need to possess an in-depth knowledge of computer hardware and software along with their applications. The BSc (Hons) in Computer Science program prepares CS graduates for a variety of careers that require specialized skills for designing computer-based solutions. These skills are in demand in IT departments of corporate sector or in the software industry.\n                ",
+                "program_duration": "4 Years",
+                "credit_hours": "130 Credits",
+                "fee": "to be announced",
+                "merit": "Not specified",
+                "teaching_system": "Semester",
+                "session_begin": "",
+                "admission_criteria": [
+                    {
+                        "s.no": 1,
+                        "criteria": "At least 50% marks in intermediate/A level, HSD and IB equivalent with compulsion of Math. Students from the Pre-Medical group can also apply."
+                    }
+                ],
+                "course_outline": "https://bnu.edu.pk/program/bsc-hons-in-computer-science#courses"
+            },
+            "computer science": {
+                "program_title": "<h2>BSc (Hons) Software Engineering </h2>",
+                "program_description": "\n                The high percentage of software component in ICT devices has provided a window of opportunity for developing countries like Pakistan to venture into the field of software development. This can help the country to leap frog the digital divide and bring about socio-economic benefits for its people.   The BSc (Hons) in Software Engineering program prepares graduates for careers in the software industry and corporate sector IT departments. \n                ",
+                "program_duration": "4 Years",
+                "credit_hours": "130 Credits",
+                "fee": "to be announced",
+                "merit": "Not specified",
+                "teaching_system": "Semester",
+                "session_begin": "",
+                "admission_criteria": [
+                    {
+                        "s.no": 1,
+                        "criteria": "At least 50% marks in intermediate/A level, HSD and IB equivalent with compulsion of Math. Students from the Pre-Medical group can also apply."
+                    }
+                ],
+                "course_outline": "https://bnu.edu.pk/program/bsc-hons-software-engineering"
+            }
+        },
+        "campuses": "Lahore"
     }
 ]

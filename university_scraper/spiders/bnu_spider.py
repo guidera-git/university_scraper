@@ -42,8 +42,11 @@ class BnuSpiderSpider(scrapy.Spider):
         call_number = response.xpath('/html/body/section[1]/div/div/div[1]/div[2]/ul[1]/li[2]/a/text()').get()
 
         # Combine data from the previous request
-        yield {
-            'university_title': response.meta['university_title'],
+        yield scrapy.Request(
+            url="https://bnu.edu.pk/program/bsc-hons-in-computer-science",
+            callback=self.parse_course_se,
+            meta={
+                  'university_title': response.meta['university_title'],
             'main_link': response.meta['main_link'],
             'social_links': response.meta['social_links'],
             'ranking': "not known",
@@ -52,4 +55,97 @@ class BnuSpiderSpider(scrapy.Spider):
                 "call": call_number
             },
             'introduction': about_us_cleaned,
+            }
+        )
+      
+
+    def parse_course_se(self, response):
+        program_title = response.xpath('/html/body/div[2]/div/div/div[2]/div/h2').get()
+        program_description = response.xpath('//div[@id="section"]/div/p/text()').get()
+        program_duration = response.xpath('/html/body/div[2]/div/div/div[2]/div/ul[1]/li[1]/p/text()').get()
+        teaching_system = "Semester"
+        session_begin = ""  # Adjust as needed
+        credit_hours = response.xpath('/html/body/div[2]/div/div/div[2]/div/ul[1]/li[3]/p/text()').get()
+
+        fee = "to be announced"  
+        merit = "Not specified"
+
+        admission_criteria = [
+            {"s.no": 1, "criteria": response.xpath('//*[@id="pills-home"]/div/div[1]/div/ul/li[1]/text()').get()},
+        ]
+
+        course_outline = "https://bnu.edu.pk/program/bsc-hons-in-computer-science#courses"
+
+        software_engineering = {
+            "program_title": program_title,
+            "program_description": program_description,
+            "program_duration": program_duration,
+            "credit_hours": credit_hours,
+            "fee": fee,
+            "merit": merit,
+            "teaching_system": teaching_system,
+            "session_begin": session_begin,
+            "admission_criteria": admission_criteria,
+            "course_outline": course_outline
         }
+
+        yield scrapy.Request(
+            url="https://bnu.edu.pk/program/bsc-hons-software-engineering",
+            callback=self.parse_course_cs,
+            meta = {
+            "university_title": response.meta["university_title"],
+            "main_link": response.meta["main_link"],
+            "social_links": response.meta["social_links"],
+            "contact_details": response.meta["contact_details"],
+            "introduction": response.meta["introduction"],
+            "programs": {
+                "software_engineering": software_engineering
+            }
+            }
+        )
+
+    def parse_course_cs(self, response):
+        program_title = response.xpath('/html/body/div[2]/div/div/div[2]/div/h2').get()
+        program_description = response.xpath('//*[@id="section"]/div/p/text()').get()
+        program_duration = response.xpath('/html/body/div[2]/div/div/div[2]/div/ul[1]/li[1]/p/text()').get()
+        teaching_system = "Semester"
+        session_begin = ""  # Adjust as needed
+        credit_hours = response.xpath('/html/body/div[2]/div/div/div[2]/div/ul[1]/li[3]/p/text()').get()
+
+        fee = "to be announced"  
+        merit = "Not specified"
+
+        admission_criteria = [
+            {"s.no": 1, "criteria": response.xpath('//*[@id="pills-home"]/div/div[1]/div/ul/li[1]/text()').get()},
+        ]
+
+        course_outline = "https://bnu.edu.pk/program/bsc-hons-software-engineering"
+
+        computer_science = {
+            "program_title": program_title,
+            "program_description": program_description,
+            "program_duration": program_duration,
+            "credit_hours": credit_hours,
+            "fee": fee,
+            "merit": merit,
+            "teaching_system": teaching_system,
+            "session_begin": session_begin,
+            "admission_criteria": admission_criteria,
+            "course_outline": course_outline
+        }
+        
+        campuses= "Lahore"
+        yield{
+         "university_title": response.meta["university_title"],
+            "main_link": response.meta["main_link"],
+            "social_links": response.meta["social_links"],
+            "contact_details": response.meta["contact_details"],
+            "introduction": response.meta["introduction"],
+            "programs": {
+                "software_engineering": response.meta["programs"]["software_engineering"],
+                "computer science": computer_science
+            },
+            "campuses": campuses
+    }
+
+
